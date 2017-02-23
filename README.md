@@ -1,7 +1,7 @@
 # Delorean
 
 A Rails Engine to Control the passage of time in a test bed.
-
+![alt text](http://i.giphy.com/UTKINn9rjA2mQ.gif "Delorean")
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-Browse to [localhost:3000/delorean](localhost:3000/delorean), stop (pause),
+Browse to [localhost:3000/delorean](http://localhost:3000/delorean), stop (pause),
 flux (scale), or accelerate (jump) to the times you need to test.
 
 ## Development
