@@ -3,6 +3,7 @@ require_dependency "delorean/application_controller"
 module Delorean
   class FluxCapacitorController < ApplicationController
     def index
+      @scale = session[:delorean_scale].to_i
     end
 
     def start
@@ -18,7 +19,10 @@ module Delorean
     end
 
     def flux
-      Timecop.scale(params[:scale])
+      session[:delorean_scale] = params[:scale]
+      Timecop.scale(params[:scale].to_i)
+      puts Time.now
+      puts Time.now
       redirect_to root_path
     end
 

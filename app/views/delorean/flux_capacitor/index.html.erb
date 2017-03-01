@@ -1,6 +1,11 @@
 <%= button_to 'Time Circuits On (Start)', action: :start %>
 <%= button_to 'Time Circuits Off (Stop)', action: :pause %>
-<%= button_to 'Fluxing', action: :flux %>
+<fieldset>
+  <%= form_tag flux_flux_capacitor_index_path do %>
+    <%= number_field_tag :scale, @scale, { type: :integer, scale: 1} %>
+    <%= submit_tag 'Fluxing' %>
+  <% end %>
+</fieldset>
 <fieldset>
   <%= form_tag accelerate_to_eighty_eight_flux_capacitor_index_path do %>
     <%= select_datetime %>
