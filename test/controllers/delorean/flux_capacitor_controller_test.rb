@@ -6,8 +6,9 @@ module Delorean
       @routes = Engine.routes
     end
 
-    # test "the truth" do
-    #   assert true
-    # end
+    test 'shows index' do
+      get :index
+      assert_response :success
+    end
   end
 end
