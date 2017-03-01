@@ -1,4 +1,5 @@
 # Delorean
+[![CircleCI](https://circleci.com/gh/GetTerminus/delorean-rails.svg?style=svg)](https://circleci.com/gh/GetTerminus/delorean-rails)
 
 A Rails Engine to Control the passage of time in a test bed.
 ![alt text](http://i.giphy.com/UTKINn9rjA2mQ.gif "Delorean")
