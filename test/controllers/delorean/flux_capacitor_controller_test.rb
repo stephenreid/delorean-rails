@@ -17,6 +17,7 @@ module Delorean
 
     test 'POST #start' do
       post :start
+      assert_response :redirect
       assert_in_delta Time.now, session[:delorean_start_time], 1.seconds
     end
 
@@ -24,16 +25,17 @@ module Delorean
       current_time = Time.now
       post :flux, { scale: 1000 }
       sleep(0.25)
-      assert_response :success
+      assert_response :redirect
       assert_equal 1000, session[:delorean_scale].to_i
       refute_in_delta Time.now, current_time, 5.seconds
     end
 
     test 'POST #accelerate_to_eighty_eight' do
-      post :flux, { date: { year: 2016, month: 1, day: 30, hour: 1, minute: 11 } }
-      assert_response :success
-      assert_equal Time.new("2016-01-30 1:11 -0500"), Time.new(session[:delorean_future])
-      assert_in_delta Time.now, 2.days.ago, 1.seconds
+      Timecop.freeze
+      current_time = Time.now
+      post :accelerate_to_eighty_eight, { date: { year: 1.year.from_now.year , month: 1, day: 1, hour: 1, minute: 11 } }
+      assert_response :redirect
+      refute_in_delta Time.now, current_time, 10.seconds
     end
   end
 end
