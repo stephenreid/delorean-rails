@@ -20,11 +20,24 @@ And then execute:
 Or install it yourself as:
 
     $ gem install delorean
+    
+Add routes to your routes.rb
+
+```ruby
+  mount Delorean::Engine, at: '/delorean'
+```
 
 ## Usage
 
 Browse to [localhost:3000/delorean](http://localhost:3000/delorean), stop (pause),
 flux (scale), or accelerate (jump) to the times you need to test.
+
+![image](https://cloud.githubusercontent.com/assets/571594/23485262/b64ada12-fea8-11e6-96d7-56c5fb25197f.png)
+
+1. To Reset, Turn the Time Circuits off and Back on
+2. To Freeze Time, Turn the Time Circuits Off
+3. To Scale Time, enter a value > 1 and flux
+4. To Jump to A Time, accelerate (to 88mph) Time will change and continue to run.
 
 ## Development
 
@@ -34,10 +47,15 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Testing
 
-Please test your code. You can test your engine within the dummy app with
+Please locally test your code. You can test your engine within the dummy app with
 ```bash
   $ cd test/dummy
   $ rails s
+```
+
+Automated tests are handled by mintest (limited to controller thus far)
+```bash
+  $ rake tests
 ```
 
 ## Contributing
