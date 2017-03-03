@@ -9,7 +9,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 group :test, :development do
-  gem 'delorean'
+  gem 'delorean_test_bed'
 end
 ```
 
@@ -19,8 +19,8 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install delorean
-    
+    $ gem install delorean_test_bed
+
 Add routes to your routes.rb
 
 ```ruby
@@ -39,6 +39,18 @@ flux (scale), or accelerate (jump) to the times you need to test.
 3. To Scale Time, enter a value > 1 and flux
 4. To Jump to A Time, accelerate (to 88mph) Time will change and continue to run.
 
+
+### Usage in Test Beds
+
+You may want to know the time factors (start, scale) when writing test beds.
+We've built a cache store so that any application (backend/frontend) can share
+this information.
+
+```ruby
+  Delorean::Cache.read(:start)
+  Delorean::Cache.read(:scale)
+  Delorean::Cache.read(:future)
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

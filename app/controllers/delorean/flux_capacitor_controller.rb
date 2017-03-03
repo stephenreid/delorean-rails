@@ -3,32 +3,32 @@ require_dependency "delorean/application_controller"
 module Delorean
   class FluxCapacitorController < ApplicationController
     def index
-      @scale = session[:delorean_scale].to_i
+      @scale = Delorean::cache.read(:future).to_i
     end
 
     def start
-      session[:delorean_start_time] = Time.now
+      Delorean::cache.write(:start, Time.now)
       Timecop.return
       redirect_to root_path
     end
 
     def pause
-      session[:delorean_pause_time] = Time.now
-      Timecop.freeze(session[:delorean_pause_time])
+      Delorean::cache.write(:pause, Time.now)
+      Timecop.freeze(Delorean::cache.read(:pause))
       redirect_to root_path
     end
 
     def flux
-      session[:delorean_scale] = params[:scale]
+      Delorean::cache.write(:scale, params[:scale])
       Timecop.scale(params[:scale].to_i)
       redirect_to root_path
     end
 
     def accelerate_to_eighty_eight
-      session[:delorean_future] = DateTime.new(
+      Delorean::cache.write(:future, DateTime.new(
         *params[:date].values.map(&:to_i)
-      )
-      Timecop.travel(session[:delorean_future])
+      ))
+      Timecop.travel(Delorean::cache.read(:future))
       redirect_to root_path
     end
   end
