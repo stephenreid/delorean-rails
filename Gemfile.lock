@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    delorean (0.0.1)
+    delorean_test_bed (0.0.2)
       rails (~> 4.2.7.1)
       timecop
 
@@ -123,7 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  delorean!
+  delorean_test_bed!
   pry
   simplecov
   sqlite3

@@ -5,7 +5,7 @@ require "delorean/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "delorean"
+  s.name        = "delorean_test_bed"
   s.version     = Delorean::VERSION
   s.authors     = ["Stephen Reid","David Harkness","Terminus"]
   s.email       = ["stephen.reid@terminus.com"]

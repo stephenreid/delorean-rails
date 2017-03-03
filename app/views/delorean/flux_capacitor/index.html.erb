@@ -2,7 +2,7 @@
 <%= button_to 'Time Circuits Off (Stop)', action: :pause %>
 <fieldset>
   <%= form_tag flux_flux_capacitor_index_path do %>
-    <%= number_field_tag :scale, @scale, { type: :integer, scale: 1} %>
+    <%= number_field_tag :scale, @scale || 0, { type: :integer, scale: 1} %>
     <%= submit_tag 'Fluxing' %>
   <% end %>
 </fieldset>
