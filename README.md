@@ -3,6 +3,9 @@
 
 A Rails Engine to Control the passage of time in a test bed.
 ![alt text](http://i.giphy.com/UTKINn9rjA2mQ.gif "Delorean")
+
+### Video
+[Video on Youtube](https://www.youtube.com/watch?v=dVaVgU3QQ5s)
 ## Installation
 
 Add this line to your application's Gemfile:
