@@ -1,4 +1,4 @@
-Delorean::Engine.routes.draw do
+DeloreanTestBed::Engine.routes.draw do
   resources :flux_capacitor, only: %w(index) do
     collection do
       post :start

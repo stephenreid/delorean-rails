@@ -1,9 +1,9 @@
-module Delorean
+module DeloreanTestBed
   class Engine < ::Rails::Engine
-    isolate_namespace Delorean
+    isolate_namespace DeloreanTestBed
     # initializer('delorean', after: :load_config_initializers) do |app|
     #   Rails.application.routes.prepend do
-    #     mount Delorean::Engine, at: '/delorean'
+    #     mount DeloreanTestBed::Engine, at: '/delorean'
     #   end
     # end
   end

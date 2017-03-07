@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module Delorean
+module DeloreanTestBed
   class FluxCapacitorControllerTest < ActionController::TestCase
     setup do
       @routes = Engine.routes
@@ -18,7 +18,7 @@ module Delorean
     test 'POST #start' do
       post :start
       assert_response :redirect
-      assert_in_delta Time.now, Delorean.cache.read(:start), 1.seconds
+      assert_in_delta Time.now, DeloreanTestBed.cache.read(:start), 1.seconds
     end
 
     test 'POST #flux' do
@@ -26,7 +26,7 @@ module Delorean
       post :flux, { scale: 1000 }
       sleep(0.25)
       assert_response :redirect
-      assert_equal 1000, Delorean.cache.read(:scale).to_i
+      assert_equal 1000, DeloreanTestBed.cache.read(:scale).to_i
       refute_in_delta Time.now, current_time, 5.seconds
     end
 

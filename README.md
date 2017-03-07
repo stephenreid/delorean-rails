@@ -27,7 +27,7 @@ Or install it yourself as:
 Add routes to your routes.rb
 
 ```ruby
-  mount Delorean::Engine, at: '/delorean'
+  mount DeloreanTestBed::Engine, at: '/delorean'
 ```
 
 ## Usage
@@ -50,9 +50,9 @@ We've built a cache store so that any application (backend/frontend) can share
 this information.
 
 ```ruby
-  Delorean::Cache.read(:start)
-  Delorean::Cache.read(:scale)
-  Delorean::Cache.read(:future)
+  DeloreanTestBed::Cache.read(:start)
+  DeloreanTestBed::Cache.read(:scale)
+  DeloreanTestBed::Cache.read(:future)
 ```
 ## Development
 
