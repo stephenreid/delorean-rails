@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Delorean::Engine => "/delorean"
+  mount DeloreanTestBed::Engine => "/delorean"
 end

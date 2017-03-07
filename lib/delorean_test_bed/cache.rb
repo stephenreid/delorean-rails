@@ -1,4 +1,4 @@
-module Delorean
+module DeloreanTestBed
   def self.cache
     Cache
   end

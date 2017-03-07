@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "delorean/version"
+require "delorean_test_bed/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "delorean_test_bed"
-  s.version     = Delorean::VERSION
+  s.version     = DeloreanTestBed::VERSION
   s.authors     = ["Stephen Reid","David Harkness","Terminus"]
   s.email       = ["stephen.reid@terminus.com"]
   s.homepage    = "https://github.com/GetTerminus/delorean-rails"
