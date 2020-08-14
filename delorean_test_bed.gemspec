@@ -8,8 +8,9 @@ Gem::Specification.new do |s|
   s.name        = "delorean_test_bed"
   s.version     = DeloreanTestBed::VERSION
   s.authors     = ["Stephen Reid","David Harkness","Terminus"]
-  s.email       = ["stephen.reid@terminus.com"]
-  s.homepage    = "https://github.com/GetTerminus/delorean-rails"
+  s.email       = ["stephenreid@ratedsar.com"]
+  s.homepage    = "https://github.com/stephenreid/delorean-rails"
+  s.homepage    = 'https://rubygems.org/gems/example'
   s.summary     = "A Rails Engine to Control the passage of time as a test bed"
   s.description = "A Rails Engine to Control the passage of time as a test bed"
   s.license     = "MIT"
@@ -17,8 +18,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.2.7.1"
-  s.add_dependency "timecop"
+  s.add_dependency "rails", ">= 4.2.7.1"
+  s.add_dependency "timecop", ">= 0.8.1"
 
   s.add_development_dependency "sqlite3"
 end

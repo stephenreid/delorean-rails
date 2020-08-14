@@ -12,10 +12,11 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-gem 'timecop'
+gem 'timecop', ">= 0.8.1"
 
 group :development, :test do
   gem 'byebug'
+  gem 'json'
   gem 'simplecov'
   gem 'pry'
 end
